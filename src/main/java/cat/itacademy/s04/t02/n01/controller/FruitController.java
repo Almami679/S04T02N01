@@ -20,10 +20,10 @@ public class FruitController {
     public ResponseEntity<String> getHomePage() {
         return new ResponseEntity<>("Welcome to fruitsAPI", HttpStatus.OK);
     }
-    @PostMapping("/add")
-    public ResponseEntity<Fruit> addFruit(@RequestBody Fruit fruit) {
-        Fruit addedFruit = fruitService.addFruit(fruit);
-        return new ResponseEntity<>(addedFruit, HttpStatus.CREATED);
+    @GetMapping("/add/{name}/{count}")
+    public ResponseEntity<Fruit> addFruit(@PathVariable String name, @PathVariable int count) {
+        Fruit fruit = new Fruit(name,count);
+        return new ResponseEntity<>(fruitService.addFruit(fruit), HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
