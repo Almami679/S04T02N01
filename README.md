@@ -1,4 +1,4 @@
-# FruitsAPI Tasca S4.02 (nivel 1)
+# FruitsAPI Tasca S4.02 (nivel 2)
 
 ### Albert Marin
 
@@ -9,7 +9,7 @@
 
 _Esta es una aplicación desarrollada con Spring Boot para gestionar 
 frutas en una base de datos. **Proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar)** 
-para manejar datos de frutas a través de una API REST._
+para manejar datos de frutas a través de una API REST. (Mediante H2)_
 
 
 ## Estructura del Proyecto
