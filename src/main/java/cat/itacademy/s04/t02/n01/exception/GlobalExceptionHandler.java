@@ -16,13 +16,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoFruitFoundException.class)
     public ResponseEntity<String> handleNoFruitFoundException(NoFruitFoundException e) {
-        log.error("Error due to non existing entry in database: {}", e.getMessage());
+        log.error("Entry not found in database: {}", e.getMessage());
         return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(DuplicateFruitException.class)
     public ResponseEntity<String> handleDuplicateFruitException(DuplicateFruitException e) {
-        log.error("Error due to already existing entry in database: {}", e.getMessage());
+        log.error("Entity to already exists in database: {}", e.getMessage());
         return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
     }
 
