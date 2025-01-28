@@ -51,11 +51,11 @@ Enlace de github del codigo: [Almami fruitsAPI repository](https://github.com/Al
  **Endpoints**
 >
 >Crear, obtener, actualizar y eliminar frutas.
-> **Endpoints**
 
 
 **Excepciones Personalizadas**
->Crear, obtener, actualizar y eliminar frutas.
+>DuplicateFruitException.
+>NoFruitFoundException.
 
 **Integración con Base de Datos**
 >Utiliza una base de datos en memoria con datos iniciales cargados desde import.sql..
