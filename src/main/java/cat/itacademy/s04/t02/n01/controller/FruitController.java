@@ -20,9 +20,8 @@ public class FruitController {
     public ResponseEntity<String> getHomePage() {
         return new ResponseEntity<>("Welcome to fruitsAPI", HttpStatus.OK);
     }
-    @GetMapping("/add/{name}/{count}")
-    public ResponseEntity<Fruit> addFruit(@PathVariable String name, @PathVariable int count) {
-        Fruit fruit = new Fruit(name,count);
+    @PostMapping("/add")
+    public ResponseEntity<Fruit> addFruit(@RequestBody Fruit fruit) {
         return new ResponseEntity<>(fruitService.addFruit(fruit), HttpStatus.CREATED);
     }
 
